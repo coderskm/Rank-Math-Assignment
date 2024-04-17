@@ -1,0 +1,13 @@
+.chartcard{
+   background-color: white;
+  border-radius: 10px;
+  /* margin: 30px; */
+}
+
+@media screen and (max-width:570px){
+  .chartcard{
+    margin-top: 15px;
+    max-width: 100%;
+    /* margin: 30px; */
+  }
+}
