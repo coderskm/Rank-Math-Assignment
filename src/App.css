@@ -1,10 +1,23 @@
 .othercard{
     display: flex;
+    padding-top: 30px;
 }
 
+.ComponentShow{
+    transition: all .5s ease-in-out;
+  transform-origin: left top;
+  transform: scaleY(0);
+}
+.ComponentShow:target{
+    transition: all .5s ease-in-out;
+  transform-origin: left top;
+      transform: scaleY(1);
 
+}
 .main-container{
-height: calc(100% - 94px);
+    padding: 30px;
+    overflow: auto;
+height: calc(100% - 105px);
 }
 
 .backdrop{

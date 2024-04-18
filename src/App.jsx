@@ -8,18 +8,20 @@ import ChartCard from "./components/ChartCard";
 import { useState } from "react";
 export default function App() {
   const [menuOpen, setMenuOpen] = useState(false);
-  
+  const [toggle, setToggle] = useState(false);
   return (
     <>
       <div className={menuOpen ? "backdrop" : ""}></div>
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <div className="main-container">
-        <MainCard />
-        <TimeLine />
-        <ChartCard />
-        <div className="othercard">
-          <OtherCard color={"blue"} content={"Buy BTC"} />
-          <OtherCard color={"green"} content={"Sell BTC"} />
+        <MainCard toggle={toggle} setToggle={setToggle} />
+        <div className={toggle ? "" : "ComponentShow"}>
+          <TimeLine />
+          <ChartCard />
+          <div className="othercard">
+            <OtherCard color={"blue"} content={"Buy BTC"} />
+            <OtherCard color={"green"} content={"Sell BTC"} />
+          </div>
         </div>
       </div>
       <Footer />
